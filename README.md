@@ -1,14 +1,14 @@
 # BatchEditor(Eng - Google Translate)
-So, I made this project for fun, and I was supposed to be making a game anyway, but oh well.
+So, I made this project for fun, and I was supposed to be making a game, but oh well.
 
 ### About the Project
-This project is a console text editor, which is a single file and weighs 2 KB.
+This project is a console text editor, a single file weighing 2 KB.
 
 Unlike other console editors, this one is completely dependent on cmd.exe.
 
 ### How it works
-- There are practically no features, which is why this editor is so lightweight (I might add them).
-- I broke the editor templates: for example, to delete a line, you have to create a new one and then create a new one.
+- There's practically no functionality, which is why this editor is so lightweight (I might add it).
+- I broke the editor templates: for example, to delete a line, you need to create a new empty line, and that line will be deleted from the previous one.
 - Also, autosave occurs after each new line.
 
 ### Statistics
@@ -24,7 +24,7 @@ Unlike other console editors, this one is completely dependent on cmd.exe.
 
 ### Как это работает
 - Функционала нет практически, из-за этого этот редактор так мало весит (возможно, я его добавлю).
-- Я поломал шаблоны редакторов: например, чтобы удалить строку, надо создать новую и сделать новую.
+- Я поломал шаблоны редакторов: например, чтобы удалить строку, надо создать новую пустую строку и эта строка удалится с предыдущей.
 - Также после каждой новой строки происходит автосохранение.
 
 ### Статистика
