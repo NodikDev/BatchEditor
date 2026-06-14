@@ -12,7 +12,7 @@ Unlike other console editors, this one is completely dependent on cmd.exe.
 - Also, autosave occurs after each new line.
 
 ### Statistics
-- A total of 113 lines of code in the current version.
+- A total of 117 lines of code in the current version.
 
 # BatchEditor(ru)
 Короче, этот проект я сделал по приколу, и вообще я игру должен был делать, ну да ладно.
@@ -28,4 +28,4 @@ Unlike other console editors, this one is completely dependent on cmd.exe.
 - Также после каждой новой строки происходит автосохранение.
 
 ### Статистика
-- Всего 113 строк кода в текущей версии.
+- Всего 117 строк кода в текущей версии.
