@@ -29,6 +29,7 @@ set "line_num=1"
 
 :editor
 cls
+if not exist "%full_path%" type nul > "%full_path%"
 title %filename% - BatchEditor
 set "next_line=1"
 set "prev_line=0"
@@ -46,7 +47,8 @@ if exist "%full_path%" if "%prev_line%"=="0" (
 set "input_line="
 set /p "input_line=%next_line% | "
 if "%input_line%"=="" goto delete_last_line
-echo/%input_line%>>"%full_path%"
+echo|set /p="%input_line%">>"%full_path%"
+echo.>>"%full_path%"
 goto editor
 
 :delete_last_line
@@ -62,12 +64,14 @@ for /f "tokens=1* delims=:" %%a in ('findstr /n "^" "%full_path%"') do (
         echo %%b>>"%full_path%.tmp"
     )
 )
-move /y "%full_path%.tmp" "%full_path%" >nul
+if exist "%full_path%.tmp" (
+    move /y "%full_path%.tmp" "%full_path%" >nul
+)
 goto editor
 
 :guide
 cls
-echo Guide
+echo Guides
 echo.
 echo 1.About
 echo.
@@ -85,8 +89,8 @@ if "%guide%"=="4" goto mm
 goto guide
 
 :about
-set "msg_text=About%%0Abold; BatchEditor Ver.0.1%%0ACurrent User: %username%"
-mshta vbscript:Execute("msgbox ""BatchEditor Ver.0.1"" & vbcrlf & ""Current User: %username%"", 64, ""About"":close")
+set "msg_text=About%%0Abold; BatchEditor Ver.0.1a%%0ACurrent User: %username%"
+mshta vbscript:Execute("msgbox ""BatchEditor Ver.0.1a"" & vbcrlf & ""Current User: %username%"", 64, ""About"":close")
 cls
 goto guide
 
